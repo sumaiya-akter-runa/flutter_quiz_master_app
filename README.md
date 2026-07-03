@@ -1,17 +1,61 @@
-# flutter_quiz_master_app
+# Quiz Master
 
-A new Flutter project.
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
-## Getting Started
+A modern, elegant, and fully-featured **Quiz Application** built with Flutter.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+##  Key Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Declarative Routing with GoRouter
+- Persistent Dark/Light Theme using SharedPreferences
+- Local Data Persistence (Total Attempts, Highest Score, Last Score)
+- Interactive Quiz with Progress Indicator
+- Multiple Categories: Sports, Science, Technology, History, General Knowledge
+- Real-time Statistics on Home Dashboard
+- Clean & Modular Code Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+##  Tech Stack
+
+- **Framework**: Flutter (Dart)
+- **Routing**: GoRouter
+- **State Management**: Provider + ChangeNotifier
+- **Local Storage**: SharedPreferences
+- **Typography**: Google Fonts (Poppins)
+
+---
+
+lib/
+├── main.dart                     # Entry point of the application
+│
+├── core/                         # Core utilities and configurations
+│   ├── constants.dart            # App constants and SharedPreferences keys
+│   ├── router.dart               # GoRouter configuration and routes
+│   └── theme_provider.dart       # Theme management with persistence
+│
+├── models/                       # Data models
+│   ├── quiz_model.dart           # QuizQuestion model class
+│   └── user_stats.dart           # User statistics model (optional)
+│
+├── screens/                      # All UI screens
+│   ├── home_screen.dart          # Dashboard with statistics and categories
+│   ├── quiz_screen.dart          # Main quiz interface
+│   └── result_screen.dart        # Result page with detailed metrics
+│
+├── data/                         # Local data sources
+│   └── dummy_questions.dart      # Hardcoded quiz questions by category
+│
+├── widgets/                      # Reusable UI components
+│   └── category_card.dart        # Custom category card widget
+│
+└── README.md                     # Project documentation
+
+##  How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sumaiya-akter-runa/flutter_quiz_master_app.git
