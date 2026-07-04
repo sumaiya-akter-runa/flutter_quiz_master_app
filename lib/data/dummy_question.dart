@@ -122,6 +122,12 @@ final List<QuizQuestion> dummyQuestions = [
     correctAnswerIndex: 1,
     category: "History",
   ),
+  QuizQuestion(
+    question: "Who was the founder of the Mughal Empire in India?",
+    options: ["Akbar", "Babur", "Shah Jahan", "Aurangzeb"],
+    correctAnswerIndex: 1,
+    category: "History",
+  ),
 
   // General Knowledge (5 Questions)
   QuizQuestion(

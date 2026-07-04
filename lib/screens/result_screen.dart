@@ -13,6 +13,8 @@ class ResultScreen extends StatelessWidget {
     final double percentage = total > 0 ? (score / total) * 100 : 0;
     final String category = args['category'] ?? 'General Knowledge';
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Quiz Result"),
@@ -50,8 +52,10 @@ class ResultScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: OutlinedButton(
-                      onPressed: () => context.go('/'), // Back to Home
-                      style: OutlinedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 16)),
+                      onPressed: () => context.go('/'),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                      ),
                       child: const Text("Back to Home"),
                     ),
                   ),
@@ -59,12 +63,12 @@ class ResultScreen extends StatelessWidget {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        // Play Again - Same Category এ নতুন করে শুরু
                         context.pushReplacement('/quiz/$category');
                       },
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        backgroundColor: Colors.deepPurple,
+                        backgroundColor: isDark ? Colors.deepPurple : Colors.deepPurple.shade700,
+                        foregroundColor: Colors.white,
                       ),
                       child: const Text("Play Again"),
                     ),
